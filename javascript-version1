@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta>
+        <title></title>
+    </head>
+
+    <body>
+
+        <h1>JAVASCRIPT</h1>
+
+        <input type="button" value="NIGHT" style="width: 200px;height: 200px;" 
+        onclick="document.querySelector('body').style.backgroundColor='black';"
+        >
+
+        <input type="button" value="DAY"   style="width: 200px;height: 200px;" 
+        onclick="document.querySelector('body').style.backgroundColor='white';"
+
+        >
+
+    </body>
+</html>
