@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta>
+        <title></title>
+    </head>
+
+    <body>
+
+        <h1>JAVASCRIPT</h1>
+
+       
+        
+        <input  type="button" value="NIGHT" style="width: 200px;height: 200px"
+            onclick="
+                var target =document.querySelector('body');
+                if(this.value === 'NIGHT')
+                {
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                    this.value = 'DAY';                      
+                }
+                else{          
+                    target.style.backgroundColor='black';
+                    target.style.color='white';             
+                    this.value = 'NIGHT'           
+                }
+            "
+            
+        >
+    </body>
+
+</html>
