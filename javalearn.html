@@ -6,27 +6,53 @@
 
     <body>
 
+        
         <h1>JAVASCRIPT</h1>
 
-       
-        
-        <input  type="button" value="NIGHT" style="width: 200px;height: 200px"
-            onclick="
-                var target =document.querySelector('body');
-                if(this.value === 'NIGHT')
+        <a href="1,html">1.HTML</a>
+        <a href="2.css">2.CSS</a>
+        <a href="3.javascript">3.JAVASCRIPT</a>
+        <div></div>
+        <input  type="button" value="NIGHT" style="width: 200px;height: 20px"
+        onclick="
+            var target =document.querySelector('body');
+            if(this.value === 'NIGHT')
+            {
+                target.style.backgroundColor='white';
+                // target.style.color='black';
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length){
+                    console.log(alist[i]);
+                    alist[i].style.color= 'black';
+                    i=i+1;
+                }
+
+                this.value = 'DAY';                      
+            }
+            else{          
+                target.style.backgroundColor='black';
+                // target.style.color='white';    
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length)
                 {
-                    target.style.backgroundColor='white';
-                    target.style.color='black';
-                    this.value = 'DAY';                      
-                }
-                else{          
-                    target.style.backgroundColor='black';
-                    target.style.color='white';             
-                    this.value = 'NIGHT'           
-                }
-            "
-            
-        >
+                    alist[i].style.color= 'powderblue';
+                    i=i+1;
+                }         
+                this.value = 'NIGHT'           
+            }
+              " 
+       >
+
+        <a>
+            Give me liberty, or give me death. 
+
+            자유가 아니면 죽음을 달라.
+        </a>
+
+
     </body>
 
 </html>
