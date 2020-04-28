@@ -2,6 +2,43 @@
     <head>
         <meta>
         <title></title>
+        <script>
+
+            function NIGHTDAYBUTTON(self) 
+            {
+
+                var target =document.querySelector('body');
+
+                if(self.value === 'NIGHT')
+                {
+                    target.style.backgroundColor='white';
+                    // target.style.color='black';
+                    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while ( i < alist.length){
+                        console.log(alist[i]);
+                        alist[i].style.color= 'black';
+                        i=i+1;
+                    }
+
+                    self.value = 'DAY';                      
+                }
+                else{          
+                    target.style.backgroundColor='black';
+                    // target.style.color='white';    
+
+                    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while ( i < alist.length)
+                    {
+                        alist[i].style.color= 'powderblue';
+                        i=i+1;
+                    }         
+                    self.value = 'NIGHT'           
+                }     
+            }
+
+        </script>
     </head>
 
     <body>
@@ -15,38 +52,12 @@
         <div></div>
         <input  type="button" value="NIGHT" style="width: 200px;height: 20px"
         onclick="
-            var target =document.querySelector('body');
-            if(this.value === 'NIGHT')
-            {
-                target.style.backgroundColor='white';
-                // target.style.color='black';
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while ( i < alist.length){
-                    console.log(alist[i]);
-                    alist[i].style.color= 'black';
-                    i=i+1;
-                }
-
-                this.value = 'DAY';                      
-            }
-            else{          
-                target.style.backgroundColor='black';
-                // target.style.color='white';    
-
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while ( i < alist.length)
-                {
-                    alist[i].style.color= 'powderblue';
-                    i=i+1;
-                }         
-                this.value = 'NIGHT'           
-            }
+                NIGHTDAYBUTTON(this);
               " 
        >
 
         <a>
+            
             Give me liberty, or give me death. 
 
             자유가 아니면 죽음을 달라.
