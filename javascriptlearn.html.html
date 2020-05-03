@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta>
+        <title></title>
+
+        <script>
+            
+            var Body = {
+                
+                setColor : function(color){
+
+                    document.querySelector('body').style.color=color;   
+                },
+
+                setBackgroundColor : function (color) {
+
+                    document.querySelector('body').style.backgroundColor=color;
+                }
+
+            }
+
+            var Links = {
+                setColor : function(color) {
+                    var alist = document.querySelectorAll('a');
+                        var i = 0;
+                        while ( i < alist.length){
+                            alist[i].style.color= color;
+                            i=i+1;
+                        }
+                    }
+            }
+
+            function NIGHTDAYBUTTON(self) 
+            {
+
+                var target =document.querySelector('body');
+
+                if(self.value === 'NIGHT')
+                {
+                    Body.setBackgroundColor('white');
+                    Body.setColor('black');
+                    self.value = 'DAY';  
+                    Links.setColor('blue');
+
+                          
+                }
+                else{          
+                    Body.setBackgroundColor('black');
+                    Body.setColor('white');    
+                    self.value = 'NIGHT'
+                    
+                    Links.setColor('powderblue');
+                        
+                }     
+            }
+            
+        </script>
+    </head>
+
+    <body>
+
+        
+        <h1><a>JAVASCRIPT</a></h1>
+
+        <a href="1,html">1.HTML</a>
+        <a href="2.css">2.CSS</a>
+        <a href="3.javascript">3.JAVASCRIPT</a>
+        <div></div>
+        <input  type="button" value="NIGHT" style="width: 200px;height: 20px"
+        onclick="
+                NIGHTDAYBUTTON(this);
+              " 
+       >
+        
+        <a>
+            Give me liberty, or give me death. 
+
+            자유가 아니면 죽음을 달라.
+        </a>
+
+
+    </body>
+
+</html>
