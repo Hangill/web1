@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+
+    <style>
+         a { text-decoration:none } /* a태그 밑줄 전체 제거*/
+
+        .Top_Mainmenu{
+          height: 150px;
+       
+          position: fixed;
+          top:0px;
+          left:0;
+          right:0;
+          margin-left:10%;
+
+        }
+    
+       #Top_Mainmenu_nav ul li{
+        list-style: none;
+        float:left;
+        line-height: 120px;
+        font-size:30px;
+        width:120px;
+        text-align: center;
+        vertical-align: middle;
+       }
+
+       #Personal_Menu ul li{
+         list-style: none;
+         float:left;
+         line-height:120px;
+         font-size: 30px;
+         width:70px;
+         text-align:center;
+         vertical-align: middle;  
+        
+         margin-right:10px;;
+         
+       }
+       #Personal_Menu{
+         display: inline;
+       }
+
+       .Mainmenu_Mymenu{
+         color: black;
+        
+       }
+
+       .MainMenu_menu_list{
+        display : inline;
+        background-color: black;
+        
+       }
+       .Mainmenu_menu{
+          color:black;
+       }
+       #MainMenu_Mymenu_Icon_home{
+          display: inline;        
+       }
+       .MainMenu_Mymenu_Icon{
+          float:left;
+          padding-top:30px;
+          padding-left:30px;
+          padding-right:30px;
+          align-self:center;
+          vertical-align:middle;
+       }
+
+      
+      .MainMenu_Mymenu_Icon_submenu{
+        list-style: none;       
+    
+      }
+       /*
+       .Mainmenu_menu:hover{ 
+         background-color: #7c8084;
+         border-radius: 3px;
+         color:white;
+       }
+       */
+
+       .Mainmenu_menu:hover{ /* 커서 속성 지정*/
+         cursor:pointer;
+
+       }
+       .Mainmenu_logo_IMG{
+        float:left;
+        margin-right:5%;
+        text-decoration:none;    
+        
+       }
+       .Create_floating{
+        font-size:50px;
+       }
+       body{
+         padding-top:150px;
+       }
+
+    </style>
+  </head>
+
+  <body>    
+    <div class="Top_Mainmenu">
+        <a class=Mainmenu_logo_IMG href="file:///C:/example.html" ><img src="C:\websource\logo.png" width="150" height="150"></a>
+        <nav id="Top_Mainmenu_nav">
+          <ul>
+            <li><a class="Mainmenu_menu" href="">메뉴1</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴2</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴3</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴4</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴5</a></li>
+          </ul>
+        </nav>
+        <div id="Personal_Menu">
+          <nav>
+            <ul>
+              <li><a class="Mainmenu_Mymenu" href="" >검색</a></li>
+              <li><a class="Mainmenu_Mymenu" href="" >상담</a></li>
+            </ul>
+          </nav>
+          <div id="MainMenu_Mymenu_Icon_Home">
+            <a class="MainMenu_Mymenu_Icon"><img src="C:\websource\Mymenu.png"></a>         
+              <nav>
+              <ul>
+                <li><a class="MainMenu_Mymenu_Icon_submenu">마이페이지</a></li>
+                <li><a class="MainMenu_Mymenu_Icon_submenu">내만화</a></li>
+                <li><a class="MainMenu_Mymenu_Icon_submenu">만화곽충전</a></li>
+                <li><a class="MainMenu_Mymenu_Icon_submenu">고객센터</a></li>                
+              </ul>
+             </nav>
+            </div>
+          </div>
+    </div>
+
+    <div class="Create_floating">내용 채우기용 1층</div>
+    <div class="Create_floating">내용 채우기용 2층</div>
+    <div class="Create_floating">내용 채우기용 3층</div>
+    <div class="Create_floating">내용 채우기용 4층</div>
+    <div class="Create_floating">내용 채우기용 5층</div>
+    <div class="Create_floating">내용 채우기용 6층</div>
+
+  </body>
+</html>
