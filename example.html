@@ -15,7 +15,7 @@
           top:0px;
           left:0;
           right:0;
-          margin-left:10%;
+          margin-left:5%;
 
         }
     
@@ -24,30 +24,14 @@
         float:left;
         line-height: 120px;
         font-size:30px;
-        width:120px;
+        width:10%;
         text-align: center;
         vertical-align: middle;
        }
-
-       #Personal_Menu ul li{
-         list-style: none;
-         float:left;
-         line-height:120px;
-         font-size: 30px;
-         width:70px;
-         text-align:center;
-         vertical-align: middle;  
-        
-         margin-right:10px;;
-         
-       }
-       #Personal_Menu{
-         display: inline;
-       }
-
+       
+      
        .Mainmenu_Mymenu{
-         color: black;
-        
+         color: black;          
        }
 
        .MainMenu_menu_list{
@@ -56,32 +40,63 @@
         
        }
        .Mainmenu_menu{
-          color:black;
+          color:black;       
        }
-       #MainMenu_Mymenu_Icon_home{
-          display: inline;        
+       #Personal_Menu_bar ul li{
+        z-index:2;
+         list-style: none;
+         width:300px;
+         height:50px;
+         border-bottom:solid 1px #666;
+         vertical-align: middle;
+         
        }
-       .MainMenu_Mymenu_Icon{
-          float:left;
-          padding-top:30px;
-          padding-left:30px;
-          padding-right:30px;
-          align-self:center;
-          vertical-align:middle;
+       #Personal_Menu_bar ul{
+         padding-left:0px;
+         margin:0;
+        
        }
-
-      
-      .MainMenu_Mymenu_Icon_submenu{
-        list-style: none;       
-    
-      }
+  
+       #Personal_Menu_bar{
+        position:absolute;
+        top:94px;
+        right:0px;
+           
+        vertical-align: middle;
+        border:black solid 1px;
+       }
+       #Personal_Menu_bar a{
+         width:300px;
+         height: 50px;
+       }
+       .Personal_Menu{
+         position:relative;
+         display:inline-block;
+         padding-top:30px;
+         vertical-align: middle;
+         height:64px;
+       }
+       .Personal_Menu a{
+          display: inline-block;
+          height: 64px;
+          
+         }
        /*
-       .Mainmenu_menu:hover{ 
-         background-color: #7c8084;
-         border-radius: 3px;
-         color:white;
+       #Persnoal_Menu_Pre{
+        display:inline-block;
+        width:130%;
+        font-size: 20px;
+        line-height: 79px;
+        font-size: 25px;
+        margin-left:3%;
        }
        */
+    
+       /*
+       #Persnoal_Menu_Pre a{
+         margin-right:7%;
+        }
+        */
 
        .Mainmenu_menu:hover{ /* 커서 속성 지정*/
          cursor:pointer;
@@ -96,6 +111,7 @@
        .Create_floating{
         font-size:50px;
        }
+
        body{
          padding-top:150px;
        }
@@ -115,26 +131,24 @@
             <li><a class="Mainmenu_menu" href="">메뉴5</a></li>
           </ul>
         </nav>
-        <div id="Personal_Menu">
-          <nav>
-            <ul>
-              <li><a class="Mainmenu_Mymenu" href="" >검색</a></li>
-              <li><a class="Mainmenu_Mymenu" href="" >상담</a></li>
-            </ul>
-          </nav>
-          <div id="MainMenu_Mymenu_Icon_Home">
-            <a class="MainMenu_Mymenu_Icon"><img src="C:\websource\Mymenu.png"></a>         
-              <nav>
-              <ul>
-                <li><a class="MainMenu_Mymenu_Icon_submenu">마이페이지</a></li>
-                <li><a class="MainMenu_Mymenu_Icon_submenu">내만화</a></li>
-                <li><a class="MainMenu_Mymenu_Icon_submenu">만화곽충전</a></li>
-                <li><a class="MainMenu_Mymenu_Icon_submenu">고객센터</a></li>                
-              </ul>
-             </nav>
-            </div>
-          </div>
+      <div class="Personal_Menu">
+        <a href="" ><img src="C:\websource\book.png" height="64">내서재</a>
+        <a href="" ><img src="C:\websource\present.png" height="64">선물</a>
+        <a href="" id="Personal_Menu_Icon"><img src="C:\websource\Mymenu.png"></a> 
+        <nav id="Personal_Menu_bar">
+          <ul>
+            <li><a href="">마이페이지</a></li>
+            <li><a href="">내서재</a></li>
+            <li><a href="">북충전</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+        </nav>
+
+      </div>
+        
     </div>
+
+    
 
     <div class="Create_floating">내용 채우기용 1층</div>
     <div class="Create_floating">내용 채우기용 2층</div>
