@@ -4,7 +4,20 @@
   <head>
     <meta charset="UTF-8">
 
+    <script>
 
+      function show_menu(){
+        alert(document.querySector("Personal_Menu_Icon").value);
+        if(document.querySector("Personal_Menu_Icon").value==="off"){
+          doucment.querySector("Personal_Menu_bar").style.display="inline-block";
+          document.querySector("Personal_Menu_Icon").value=="on";
+        }
+        else{
+          doucment.querySector("Personal_Menu_bar").style.display="none";
+          document.querySector("Personal_Menu_Icon").value=="off";
+        }
+      }
+    </script>
     <style>
          a { text-decoration:none } /* a태그 밑줄 전체 제거*/
 
@@ -58,6 +71,7 @@
        }
   
        #Personal_Menu_bar{
+        display:none;
         position:absolute;
         top:94px;
         right:0px;
@@ -81,22 +95,7 @@
           height: 64px;
           
          }
-       /*
-       #Persnoal_Menu_Pre{
-        display:inline-block;
-        width:130%;
-        font-size: 20px;
-        line-height: 79px;
-        font-size: 25px;
-        margin-left:3%;
-       }
-       */
-    
-       /*
-       #Persnoal_Menu_Pre a{
-         margin-right:7%;
-        }
-        */
+        
 
        .Mainmenu_menu:hover{ /* 커서 속성 지정*/
          cursor:pointer;
@@ -134,7 +133,7 @@
       <div class="Personal_Menu">
         <a href="" ><img src="C:\websource\book.png" height="64">내서재</a>
         <a href="" ><img src="C:\websource\present.png" height="64">선물</a>
-        <a href="" id="Personal_Menu_Icon"><img src="C:\websource\Mymenu.png"></a> 
+        <a href="" id="Personal_Menu_Icon" value="on" onclick="show_menu()"><img src="C:\websource\Mymenu.png"></a> 
         <nav id="Personal_Menu_bar">
           <ul>
             <li><a href="">마이페이지</a></li>
