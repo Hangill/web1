@@ -7,27 +7,42 @@
     <script>
 
       function show_menu(){
-        alert(document.querySector("Personal_Menu_Icon").value);
-        if(document.querySector("Personal_Menu_Icon").value==="off"){
-          doucment.querySector("Personal_Menu_bar").style.display="inline-block";
-          document.querySector("Personal_Menu_Icon").value=="on";
+
+        var id_value = document.getElementById("Personal_Menu_bar");
+
+        if(id_value.value === "on"){
+          id_value.style.display = "none";
+          id_value.value="off";
+        }
+
+        else{
+          id_value.style.display = "inline-block";
+          id_value.value="on";
+        }
+        /*
+        if(document.querySelector("Personal_Menu_Icon").value==="off"){
+          doucment.querySelector("Personal_Menu_bar").style.display="inline-block";
+          document.querySelector("Personal_Menu_Icon").value ="on";
         }
         else{
-          doucment.querySector("Personal_Menu_bar").style.display="none";
-          document.querySector("Personal_Menu_Icon").value=="off";
+          doucment.querySelector("Personal_Menu_bar").style.display="none";
+          document.querySelector("Personal_Menu_Icon").value ="off";
         }
+        */
       }
     </script>
     <style>
-         a { text-decoration:none } /* a태그 밑줄 전체 제거*/
+         a { text-decoration:none;/* a태그 밑줄 전체 제거*/
+          cursor:pointer;
+         } 
 
         .Top_Mainmenu{
           height: 150px;
-       
+          width:1300px;
           position: fixed;
           top:0px;
-          left:0;
-          right:0;
+          left:10%;
+          right:10%;
           margin-left:5%;
 
         }
@@ -67,15 +82,16 @@
        #Personal_Menu_bar ul{
          padding-left:0px;
          margin:0;
-        
        }
-  
+       #Personal_Menu_Icon{
+          position:relative;
+       }
+       
        #Personal_Menu_bar{
         display:none;
         position:absolute;
-        top:94px;
-        right:0px;
-           
+        top:80px;
+        right:0%;
         vertical-align: middle;
         border:black solid 1px;
        }
@@ -113,8 +129,54 @@
 
        body{
          padding-top:150px;
+  
        }
 
+    
+       
+      .slide ul,li{list-style:none;}
+      .slide{ width: 1130px; height:400px; overflow:hidden}
+      .slide ul{width:calc(100% * 4);display:flex; animation:slide 8s infinite;}  
+      .slide li{width:calc(100% / 4);height:300px;}
+      .slide li:nth-child(1){background:#ffa;}
+      .slide li:nth-child(2){background:#faa;}
+      .slide li:nth-child(3){background:#afa;}
+      .slide li:nth-child(4){background:#aaf;}
+       
+      @keyframes slide {
+      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+      10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+      35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+      50% {margin-left:-200%;}
+      60% {margin-left:-200%;}
+      75% {margin-left:-300%;}
+      85% {margin-left:-300%;}
+      100% {margin-left:0;}
+      }
+      .banner_dot{
+        border-radius: 50%;
+        /*border:solid black 2px;*/
+        color:balck;
+        width:10px;
+        height:10px ;
+        opacity: 0.5;
+      }
+
+      .button a{
+        background-color:white;
+        opacity: 0.5;
+        border-radius: 50%;
+      }
+
+      .banner{
+        border:solid black 2px;
+        width:1130px;
+        height:400px;
+      }
+      .banner ul,li{list-style:none;}
+    
+    
     </style>
   </head>
 
@@ -130,12 +192,13 @@
             <li><a class="Mainmenu_menu" href="">메뉴5</a></li>
           </ul>
         </nav>
-      <div class="Personal_Menu">
-        <a href="" ><img src="C:\websource\book.png" height="64">내서재</a>
-        <a href="" ><img src="C:\websource\present.png" height="64">선물</a>
-        <a href="" id="Personal_Menu_Icon" value="on" onclick="show_menu()"><img src="C:\websource\Mymenu.png"></a> 
-        <nav id="Personal_Menu_bar">
-          <ul>
+
+      <div class="">
+        <a><img src="C:\websource\book.png" height="64">내서재</a>
+        <a><img src="C:\websource\present.png" height="64">선물</a>
+        <a id="Personal_Menu_Icon"  onclick="show_menu();"><img src="C:\websource\Mymenu.png"></a> 
+        <nav id="Personal_Menu_bar" value="on" >
+          <ul id="Personal_Menu_bar_ul">
             <li><a href="">마이페이지</a></li>
             <li><a href="">내서재</a></li>
             <li><a href="">북충전</a></li>
@@ -144,17 +207,36 @@
         </nav>
 
       </div>
-        
+
+      <div class="slide">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="banner"> 
+        <ul>
+          <li ><a class="banner_element" ></a></li>
+          <li ><a class="banner_element" ></a></li>
+          <li ><a class="banner_element" ></a></li>
+          <li ><a class="banner_element" ></a></li>
+        </ul> 
+        <div class="button" style="z-index:2" >
+          <a href="javascript:void(0);" id="banner_button_rigth"><img src=https://image.flaticon.com/icons/svg/892/892528.svg width="40px;" height="40px;"></a>
+          <a href="javascript:void(0);" id="banner_button_left"></a>
+        </div>
+        <div class="banner_dot_nav">
+          <span class="banner_dot"></span>
+          <span class="banner_dot"></span>
+          <span class="banner_dot"></span>
+          <span class="banner_dot"></span>
+        </div>
+      </div>
     </div>
 
     
-
-    <div class="Create_floating">내용 채우기용 1층</div>
-    <div class="Create_floating">내용 채우기용 2층</div>
-    <div class="Create_floating">내용 채우기용 3층</div>
-    <div class="Create_floating">내용 채우기용 4층</div>
-    <div class="Create_floating">내용 채우기용 5층</div>
-    <div class="Create_floating">내용 채우기용 6층</div>
 
   </body>
 </html>
