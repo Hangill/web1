@@ -19,6 +19,25 @@
           id_value.style.display = "inline-block";
           id_value.value="on";
         }
+
+        function banner(now_banner_nummber){
+            var i;
+            var banner_img = document.getElementsByClassName("banner_element");
+            
+            for(i=0; i<banner_img.length ; i++){
+              if(now_banner_nummber === i+1){
+                banner_img[i].style.display ="inline-block";
+                opacity:
+              }
+              else{
+                banner_img[i].style.display ="none";
+              }
+              
+            }
+
+
+
+        }
         /*
         if(document.querySelector("Personal_Menu_Icon").value==="off"){
           doucment.querySelector("Personal_Menu_bar").style.display="inline-block";
@@ -132,6 +151,11 @@
   
        }
 
+       ul{
+        margin-top: 0px;
+        padding-left: 0px;
+       }
+
     
        
       .slide ul,li{list-style:none;}
@@ -155,27 +179,58 @@
       100% {margin-left:0;}
       }
       .banner_dot{
+        display:inline-block;
+        background-color: white;
         border-radius: 50%;
-        /*border:solid black 2px;*/
-        color:balck;
+        border: solid black 2px;
         width:10px;
-        height:10px ;
+        height:10px;
         opacity: 0.5;
+        margin:5px;
       }
-
-      .button a{
-        background-color:white;
-        opacity: 0.5;
-        border-radius: 50%;
+      .banner_dot_nav{
+        text-align:center;
+        display:block;
+        width:1130px;
+        height:50px;
+        position:absolute;
+        top:80%;
       }
 
       .banner{
+        position:relative;
         border:solid black 2px;
+        background-color:fff;
         width:1130px;
         height:400px;
       }
       .banner ul,li{list-style:none;}
-    
+
+      #banner_button_rigth{
+        position:absolute;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 30%;
+        opacity:0.6;
+        top:45%;
+        right:15%;
+      }
+
+      #banner_button_left{
+        position:absolute;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 30%;
+        opacity:0.6;
+        top:45%;
+        left:15%;
+      }
+      .banner_element{
+        position:absolute;
+      }
+     
     
     </style>
   </head>
@@ -218,16 +273,16 @@
       </div>
       <div class="banner"> 
         <ul>
-          <li ><a class="banner_element" ></a></li>
-          <li ><a class="banner_element" ></a></li>
-          <li ><a class="banner_element" ></a></li>
-          <li ><a class="banner_element" ></a></li>
+          <li ><a class="banner_element" ><img src="C:\websource\img1.jpg" width="1130px" height="400px"></a></li>
+          <li ><a class="banner_element" ><img src="C:\websource\img2.jpg" width="1130px" height="400px"></a></li>
+          <li ><a class="banner_element" ><img src="C:\websource\img3.jpg" width="1130px" height="400px"></a></li>
+          <li ><a class="banner_element" ><img src="C:\websource\img4.jpg" width="1130px" height="400px"></a></li>
         </ul> 
         <div class="button" style="z-index:2" >
-          <a href="javascript:void(0);" id="banner_button_rigth"><img src=https://image.flaticon.com/icons/svg/892/892528.svg width="40px;" height="40px;"></a>
-          <a href="javascript:void(0);" id="banner_button_left"></a>
+          <a href="javascript:void(0);" id="banner_button_rigth" onclick="banner_button_right"><img src=https://image.flaticon.com/icons/svg/892/892528.svg width="50px;" height="50px;"></a>
+          <a href="javascript:void(0);" id="banner_button_left"  onclick="banner_button_left"> <img src=https://image.flaticon.com/icons/svg/892/892512.svg width="50px;" height="50px;"></a>
         </div>
-        <div class="banner_dot_nav">
+        <div class="banner_dot_nav" style="z-index:3">
           <span class="banner_dot"></span>
           <span class="banner_dot"></span>
           <span class="banner_dot"></span>
