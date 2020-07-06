@@ -25,9 +25,9 @@
             var banner_img = document.getElementsByClassName("banner_element");
             
             for(i=0; i<banner_img.length ; i++){
-              if(now_banner_nummber === i+1){
+              if(now_banner_nummber === i+1){ // 배너 
                 banner_img[i].style.display ="inline-block";
-                opacity:
+                
               }
               else{
                 banner_img[i].style.display ="none";
@@ -218,6 +218,7 @@
       }
 
       #banner_button_left{
+        display:none;
         position:absolute;
         width: 50px;
         height: 50px;
@@ -228,9 +229,87 @@
         left:15%;
       }
       .banner_element{
+        display:none;
         position:absolute;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 30%;
+        opacity:0.6;
+        top:45%;
+        left:15%;
       }
-     
+
+      .banner_element_pre{
+        display:inline-block;
+        position:absolute;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 30%;
+        top:45%;
+        left:15%;
+        opacity:0;
+      }
+      .banner_element_now{
+        display:inline-block;
+        position:absolute;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 30%;
+        top:45%;
+        left:15%;
+        opacity:1;
+        animation-name:opaci-now;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+      
+      }
+      .banner_element_aft{
+        display:inline-block;
+        position:absolute;
+        width: 50px;
+        height: 50px;
+        background-color: gray;
+        border-radius: 30%;
+        top:45%;
+        left:15%;
+        opacity:0;
+        animation-name:opaci-aft;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+
+      }
+      #banner_button_rigth:hover{
+        transform:translate(0,0);
+        
+      }
+
+      @keyframes opaci-now {
+        from{
+          opacity:1;
+        }
+
+        to{
+          opacity:0;
+        }
+
+      }
+      
+      @keyframes opaci-aft {
+        from{
+          opacity:0;
+        }
+
+        to{
+          opacity:1;
+        }
+
+      }
+
+
+      
     
     </style>
   </head>
@@ -273,8 +352,8 @@
       </div>
       <div class="banner"> 
         <ul>
-          <li ><a class="banner_element" ><img src="C:\websource\img1.jpg" width="1130px" height="400px"></a></li>
-          <li ><a class="banner_element" ><img src="C:\websource\img2.jpg" width="1130px" height="400px"></a></li>
+          <li ><a class="banner_element_now" ><img src="C:\websource\img1.jpg" width="1130px" height="400px"></a></li>
+          <li ><a class="banner_element_aft" ><img src="C:\websource\img2.jpg" width="1130px" height="400px"></a></li>
           <li ><a class="banner_element" ><img src="C:\websource\img3.jpg" width="1130px" height="400px"></a></li>
           <li ><a class="banner_element" ><img src="C:\websource\img4.jpg" width="1130px" height="400px"></a></li>
         </ul> 
