@@ -4,53 +4,46 @@
   <head>
     <meta charset="UTF-8">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+
+
     <script>
 
-      function show_menu(){
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+      new Swiper('.swiper-container',{
+    
+        pagination : { // 페이징 설정
+	    	  el : '.swiper-pagination',
+	    	  clickable : true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+	      },
 
-        var id_value = document.getElementById("Personal_Menu_bar");
+        navigation : {
+	        	nextEl : '.swiper-button-next', // 다음 버튼 클래스명
+	        	prevEl : '.swiper-button-prev', // 이번 버튼 클래스명
+	      },
 
-        if(id_value.value === "on"){
-          id_value.style.display = "none";
-          id_value.value="off";
-        }
-
-        else{
-          id_value.style.display = "inline-block";
-          id_value.value="on";
-        }
-
-        function banner(now_banner_nummber){
-            var i;
-            var banner_img = document.getElementsByClassName("banner_element");
-            
-            for(i=0; i<banner_img.length ; i++){
-              if(now_banner_nummber === i+1){ // 배너 
-                banner_img[i].style.display ="inline-block";
-                
-              }
-              else{
-                banner_img[i].style.display ="none";
-              }
-              
-            }
-
-
-
-        }
-        /*
-        if(document.querySelector("Personal_Menu_Icon").value==="off"){
-          doucment.querySelector("Personal_Menu_bar").style.display="inline-block";
-          document.querySelector("Personal_Menu_Icon").value ="on";
-        }
-        else{
-          doucment.querySelector("Personal_Menu_bar").style.display="none";
-          document.querySelector("Personal_Menu_Icon").value ="off";
-        }
-        */
-      }
+      });
+      
     </script>
     <style>
+
+        .swiper-container {
+        	width:1130PX;
+        	height:600px;
+          display:inline-block;
+        
+        }
+        .swiper-slide {
+        	text-align:center;
+        	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
+        	align-items:center; /* 위아래 기준 중앙정렬 */
+        	justify-content:center; /* 좌우 기준 중앙정렬 */
+        }
+        .swiper-slide img {
+          width:1130px;
+          height:400px;
+        }
+
          a { text-decoration:none;/* a태그 밑줄 전체 제거*/
           cursor:pointer;
          } 
@@ -142,9 +135,7 @@
         text-decoration:none;    
         
        }
-       .Create_floating{
-        font-size:50px;
-       }
+
 
        body{
          padding-top:150px;
@@ -156,160 +147,6 @@
         padding-left: 0px;
        }
 
-    
-       
-      .slide ul,li{list-style:none;}
-      .slide{ width: 1130px; height:400px; overflow:hidden}
-      .slide ul{width:calc(100% * 4);display:flex; animation:slide 8s infinite;}  
-      .slide li{width:calc(100% / 4);height:300px;}
-      .slide li:nth-child(1){background:#ffa;}
-      .slide li:nth-child(2){background:#faa;}
-      .slide li:nth-child(3){background:#afa;}
-      .slide li:nth-child(4){background:#aaf;}
-       
-      @keyframes slide {
-      0% {margin-left:0;} /* 0 ~ 10  : 정지 */
-      10% {margin-left:0;} /* 10 ~ 25 : 변이 */
-      25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
-      35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
-      50% {margin-left:-200%;}
-      60% {margin-left:-200%;}
-      75% {margin-left:-300%;}
-      85% {margin-left:-300%;}
-      100% {margin-left:0;}
-      }
-      .banner_dot{
-        display:inline-block;
-        background-color: white;
-        border-radius: 50%;
-        border: solid black 2px;
-        width:10px;
-        height:10px;
-        opacity: 0.5;
-        margin:5px;
-      }
-      .banner_dot_nav{
-        text-align:center;
-        display:block;
-        width:1130px;
-        height:50px;
-        position:absolute;
-        top:80%;
-      }
-
-      .banner{
-        position:relative;
-        border:solid black 2px;
-        background-color:fff;
-        width:1130px;
-        height:400px;
-      }
-      .banner ul,li{list-style:none;}
-
-      #banner_button_rigth{
-        position:absolute;
-        width: 50px;
-        height: 50px;
-        background-color: gray;
-        border-radius: 30%;
-        opacity:0.6;
-        top:45%;
-        right:15%;
-      }
-
-      #banner_button_left{
-        display:none;
-        position:absolute;
-        width: 50px;
-        height: 50px;
-        background-color: gray;
-        border-radius: 30%;
-        opacity:0.6;
-        top:45%;
-        left:15%;
-      }
-      .banner_element{
-        display:none;
-        position:absolute;
-        width: 50px;
-        height: 50px;
-        background-color: gray;
-        border-radius: 30%;
-        opacity:0.6;
-        top:45%;
-        left:15%;
-      }
-
-      .banner_element_pre{
-        display:inline-block;
-        position:absolute;
-        width: 50px;
-        height: 50px;
-        background-color: gray;
-        border-radius: 30%;
-        top:45%;
-        left:15%;
-        opacity:0;
-      }
-      .banner_element_now{
-        display:inline-block;
-        position:absolute;
-        width: 50px;
-        height: 50px;
-        background-color: gray;
-        border-radius: 30%;
-        top:45%;
-        left:15%;
-        opacity:1;
-        animation-name:opaci-now;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-      
-      }
-      .banner_element_aft{
-        display:inline-block;
-        position:absolute;
-        width: 50px;
-        height: 50px;
-        background-color: gray;
-        border-radius: 30%;
-        top:45%;
-        left:15%;
-        opacity:0;
-        animation-name:opaci-aft;
-        animation-duration: 8s;
-        animation-iteration-count: infinite;
-
-      }
-      #banner_button_rigth:hover{
-        transform:translate(0,0);
-        
-      }
-
-      @keyframes opaci-now {
-        from{
-          opacity:1;
-        }
-
-        to{
-          opacity:0;
-        }
-
-      }
-      
-      @keyframes opaci-aft {
-        from{
-          opacity:0;
-        }
-
-        to{
-          opacity:1;
-        }
-
-      }
-
-
-      
     
     </style>
   </head>
@@ -342,32 +179,19 @@
 
       </div>
 
-      <div class="slide">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="C:\websource\img1.jpg" ></div>
+        <div class="swiper-slide"><img src="C:\websource\img2.jpg" ></div>
+        <div class="swiper-slide"><img src="C:\websource\img3.jpg" ></div>
+        <div class="swiper-slide"><img src="C:\websource\img4.jpg" ></div>
       </div>
-      <div class="banner"> 
-        <ul>
-          <li ><a class="banner_element_now" ><img src="C:\websource\img1.jpg" width="1130px" height="400px"></a></li>
-          <li ><a class="banner_element_aft" ><img src="C:\websource\img2.jpg" width="1130px" height="400px"></a></li>
-          <li ><a class="banner_element" ><img src="C:\websource\img3.jpg" width="1130px" height="400px"></a></li>
-          <li ><a class="banner_element" ><img src="C:\websource\img4.jpg" width="1130px" height="400px"></a></li>
-        </ul> 
-        <div class="button" style="z-index:2" >
-          <a href="javascript:void(0);" id="banner_button_rigth" onclick="banner_button_right"><img src=https://image.flaticon.com/icons/svg/892/892528.svg width="50px;" height="50px;"></a>
-          <a href="javascript:void(0);" id="banner_button_left"  onclick="banner_button_left"> <img src=https://image.flaticon.com/icons/svg/892/892512.svg width="50px;" height="50px;"></a>
-        </div>
-        <div class="banner_dot_nav" style="z-index:3">
-          <span class="banner_dot"></span>
-          <span class="banner_dot"></span>
-          <span class="banner_dot"></span>
-          <span class="banner_dot"></span>
-        </div>
-      </div>
+      <!-- 네비게이션 -->
+      <div class="swiper-button-next"></div><!-- 다음 버튼 (오른쪽에 있는 버튼) -->
+      <div class="swiper-button-prev"></div><!-- 이전 버튼 -->
+      <!-- 페이징 -->
+      <div class="swiper-pagination"></div>
+
     </div>
 
     
