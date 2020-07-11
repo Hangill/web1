@@ -25,11 +25,10 @@
         	height:400px;
           position:relative;
           justify-items: center;
-
-      
-                
+                  
         }
-        .swiper-slide {
+        .swiper-slide {      
+          position: relative;
         	text-align:center;
         	display:flex; /* 내용을 중앙정렬 하기위해 flex 사용 */
         	align-items:center; /* 위아래 기준 중앙정렬 */
@@ -47,11 +46,11 @@
           height: 150px;
           width:1300px;
           position: fixed;
+          z-index: 5;
           top:0px;
           left:10%;
           right:10%;
           margin-left:5%;
-
         }
     
        #Top_Mainmenu_nav ul li{
@@ -78,7 +77,7 @@
           color:black;       
        }
        #Personal_Menu_bar ul li{
-        z-index:2;
+         
          list-style: none;
          width:300px;
          height:50px;
@@ -95,6 +94,7 @@
        }
        
        #Personal_Menu_bar{
+        z-index:2;
         display:none;
         position:absolute;
         top:80px;
@@ -229,9 +229,9 @@
           </ul>
         </nav>
 
-      <div class=""></div>
         <a><img src="C:\websource\book.png" height="64">내서재</a>
         <a><img src="C:\websource\present.png" height="64">선물</a>
+
         <a id="Personal_Menu_Icon"  onclick="show_menu();"><img src="C:\websource\Mymenu.png"></a> 
         <nav id="Personal_Menu_bar" value="on" >
           <ul id="Personal_Menu_bar_ul">
@@ -351,6 +351,21 @@
         },
 
         });
+
+        function show_menu(){
+
+          var id_value = document.getElementById("Personal_Menu_bar");
+
+          if(id_value.value === "on"){
+            id_value.style.display = "none";
+            id_value.value="off";
+          }
+
+          else{
+            id_value.style.display = "inline-block";
+            id_value.value="on";
+          }
+        }
     </script>
 
   </body>
