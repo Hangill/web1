@@ -10,9 +10,17 @@
     <style type="text/css">
 
         .home_page_main_box{
-          display:flex;
+          text-align: center;
           align-items: center;
           justify-content:center;
+        }
+
+        .home_page_main_box_Subtitle{
+          color: #000;
+          font-size:25px;
+          height:70px;
+          line-height:70px;
+       
         }
         .BarCartoonBoard{
           display:flex;
@@ -24,7 +32,7 @@
         	width:100%;
         	height:400px;
           position:relative;
-          justify-items: center;
+          justify-items: center;  
                   
         }
         .swiper-slide {      
@@ -44,13 +52,11 @@
 
         .Top_Mainmenu{
           height: 150px;
-          width:1300px;
+          width:2000px;
           position: fixed;
           z-index: 5;
           top:0px;
-          left:10%;
-          right:10%;
-          margin-left:5%;
+          background-color: white;
         }
     
        #Top_Mainmenu_nav ul li{
@@ -90,17 +96,22 @@
          margin:0;
        }
        #Personal_Menu_Icon{
+          z-index:2;
+          width:60px;
+          height:60px;
           position:relative;
+          display:inline-block;
        }
        
        #Personal_Menu_bar{
         z-index:2;
         display:none;
         position:absolute;
-        top:80px;
         right:0%;
+        top:100%;
         vertical-align: middle;
         border:black solid 1px;
+        background-color:white;
        }
        #Personal_Menu_bar a{
          width:300px;
@@ -118,6 +129,11 @@
           height: 64px;
           
          }
+
+        #Top_Mainmenu_Personal_menu{
+          display:inline-block;
+   
+        }
         
 
        .Mainmenu_menu:hover{ /* 커서 속성 지정*/
@@ -126,7 +142,8 @@
        }
        .Mainmenu_logo_IMG{
         float:left;
-        margin-right:5%;
+        margin-right:2%;
+        margin-left:15%;
         text-decoration:none;    
         
        }
@@ -135,6 +152,8 @@
        body{
          padding-top:150px;
          margin:0;
+         overflow-x: scroll;
+
        }
 
        ul{
@@ -153,6 +172,7 @@
 
         .BarCartoonBoard{
 
+            display:flex;
             border-bottom: 1px solid #c3c9cf;
             border-top: 1px solid c3c9cf;
 
@@ -166,20 +186,23 @@
          
         }
         .CartoonBoard{
-            display: inline-block;
 
+            display: inline-block;
             border: 1px solid #c3c9cf;
             border-radius: 10px;
             width: 175px;
             height: 300px;
             vertical-align: top;
+            margin-bottom:40px;
+            margin-top:20px;
+            margin-left:30px;
         }
         .CartoonBoardImgSection{
             border-bottom: 1px solid #c3c9cf;
             position:relative;
             margin: 0 0 0 0;
             width: 175px;
-            height: 200px;
+            height: 80%;
 
             
         }
@@ -192,14 +215,16 @@
             padding: 5px 10px;
             border-bottom-right-radius: 5px;
             border-top-left-radius: 5px;
-            text-decoration: black;
-          
+            text-decoration: black;     
+        }
+        .CartoonBoardFootnote{
+          height:0px;
         }
         
         .BarCartoonBoard{
 
           border-bottom: 1px solid #c3c9cf;
-          border-top: 1px solid c3c9cf;
+          border-top: 1px solid c3c9cf;        
 
         }
 
@@ -210,7 +235,11 @@
         .swiper-button-prev{
           left:20%
         }
-      
+        #Personal_Menu_Icon_box{
+          display:inline-block;
+          position:relative;
+          height:60px;
+        }
     
     </style>
 
@@ -228,22 +257,23 @@
             <li><a class="Mainmenu_menu" href="">메뉴5</a></li>
           </ul>
         </nav>
-
-        <a><img src="C:\websource\book.png" height="64">내서재</a>
-        <a><img src="C:\websource\present.png" height="64">선물</a>
-
-        <a id="Personal_Menu_Icon"  onclick="show_menu();"><img src="C:\websource\Mymenu.png"></a> 
-        <nav id="Personal_Menu_bar" value="on" >
-          <ul id="Personal_Menu_bar_ul">
-            <li><a href="">마이페이지</a></li>
-            <li><a href="">내서재</a></li>
-            <li><a href="">북충전</a></li>
-            <li><a href="">고객센터</a></li>
-          </ul>
-        </nav>
-
-      
-    </div>
+        <div id="Top_Mainmenu_Personal_menu">
+          <a><img src="C:\websource\book.png" height="64">내서재</a>
+          <a><img src="C:\websource\present.png" height="64">선물</a>
+          <div id=Personal_Menu_Icon_box>
+              <a id="Personal_Menu_Icon" onclick="show_menu();"> <img src="C:\websource\Mymenu.png"></a>
+              <nav id="Personal_Menu_bar" value="on" >
+              <ul id="Personal_Menu_bar_ul">
+                <li><a href="">마이페이지</a></li>
+                <li><a href="">내서재</a></li>
+                <li><a href="">북충전</a></li>
+                <li><a href="">고객센터</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </div>    
+    
 
     <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -259,11 +289,8 @@
             <div class="swiper-pagination"></div>
     </div>
     
-    
-    
-
     <div class="home_page_main_box">
-     <div cLass="home_page_main_box_Subtitle">최신업데이트 가장 핫한 만화
+     <div cLass="home_page_main_box_Subtitle">최신업데이트 가장 핫한 만화</div>
      <div class="BarCartoonBoard">
          <div class="TitleBoard">업데이트 만화</div>
 
@@ -328,8 +355,215 @@
             </div>
           </div>
       </div>
+    
     </div>
-    </div>
+
+    <div class="home_page_main_box">
+      <div cLass="home_page_main_box_Subtitle">맞춤 키워드</div>
+      <div class="BarCartoonBoard">
+          <div class="TitleBoard">업데이트 만화</div>
+ 
+          <div class="CartoonBoard">
+           <div class="CartoonBoardImgSection">이미지섹션
+             <div class="CartoonBoardImgSection_Number">1</div>
+             <div class="CartoonBoardImgSection_img"></div>
+             <div class="CartoonBoardImgSection_tag"></div>   
+           </div>        
+           <div class="CartoonBoardFootnote">설명섹션
+              <div class="CartoonBoardFootnote_CartoonName"></div>
+              <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+              <div class="CartoonBoardFootnote_tag"></div>
+           </div>
+           </div>
+           <div class="CartoonBoard">
+             <div class="CartoonBoardImgSection">이미지섹션
+               <div class="CartoonBoardImgSection_Number">2</div>
+               <div class="CartoonBoardImgSection_img"></div>
+               <div class="CartoonBoardImgSection_tag"></div>   
+             </div>        
+             <div class="CartoonBoardFootnote">설명섹션
+                <div class="CartoonBoardFootnote_CartoonName"></div>
+                <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                <div class="CartoonBoardFootnote_tag"></div>
+             </div>
+           </div>
+           <div class="CartoonBoard">
+               <div class="CartoonBoardImgSection">이미지섹션
+                 <div class="CartoonBoardImgSection_Number">3</div>
+                 <div class="CartoonBoardImgSection_img"></div>
+                 <div class="CartoonBoardImgSection_tag"></div>   
+               </div>        
+               <div class="CartoonBoardFootnote">설명섹션
+                  <div class="CartoonBoardFootnote_CartoonName"></div>
+                  <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                  <div class="CartoonBoardFootnote_tag"></div>
+               </div>
+           </div>
+           <div class="CartoonBoard">
+                 <div class="CartoonBoardImgSection">이미지섹션
+                   <div class="CartoonBoardImgSection_Number">4</div>
+                   <div class="CartoonBoardImgSection_img"></div>
+                   <div class="CartoonBoardImgSection_tag"></div>   
+                 </div>        
+                 <div class="CartoonBoardFootnote">설명섹션
+                    <div class="CartoonBoardFootnote_CartoonName"></div>
+                    <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                    <div class="CartoonBoardFootnote_tag"></div>
+                 </div>
+           </div>
+           <div class="CartoonBoard">
+             <div class="CartoonBoardImgSection">이미지섹션
+               <div class="CartoonBoardImgSection_Number">5</div>
+               <div class="CartoonBoardImgSection_img"></div>
+               <div class="CartoonBoardImgSection_tag"></div>   
+             </div>        
+             <div class="CartoonBoardFootnote">설명섹션
+                <div class="CartoonBoardFootnote_CartoonName"></div>
+                <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                <div class="CartoonBoardFootnote_tag"></div>
+             </div>
+           </div>
+       </div>
+     
+     </div>
+
+     <div class="home_page_main_box">
+      <div cLass="home_page_main_box_Subtitle">추첨 장르</div>
+      <div class="BarCartoonBoard">
+          <div class="TitleBoard">업데이트 만화</div>
+ 
+          <div class="CartoonBoard">
+           <div class="CartoonBoardImgSection">이미지섹션
+             <div class="CartoonBoardImgSection_Number">1</div>
+             <div class="CartoonBoardImgSection_img"></div>
+             <div class="CartoonBoardImgSection_tag"></div>   
+           </div>        
+           <div class="CartoonBoardFootnote">설명섹션
+              <div class="CartoonBoardFootnote_CartoonName"></div>
+              <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+              <div class="CartoonBoardFootnote_tag"></div>
+           </div>
+           </div>
+           <div class="CartoonBoard">
+             <div class="CartoonBoardImgSection">이미지섹션
+               <div class="CartoonBoardImgSection_Number">2</div>
+               <div class="CartoonBoardImgSection_img"></div>
+               <div class="CartoonBoardImgSection_tag"></div>   
+             </div>        
+             <div class="CartoonBoardFootnote">설명섹션
+                <div class="CartoonBoardFootnote_CartoonName"></div>
+                <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                <div class="CartoonBoardFootnote_tag"></div>
+             </div>
+           </div>
+           <div class="CartoonBoard">
+               <div class="CartoonBoardImgSection">이미지섹션
+                 <div class="CartoonBoardImgSection_Number">3</div>
+                 <div class="CartoonBoardImgSection_img"></div>
+                 <div class="CartoonBoardImgSection_tag"></div>   
+               </div>        
+               <div class="CartoonBoardFootnote">설명섹션
+                  <div class="CartoonBoardFootnote_CartoonName"></div>
+                  <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                  <div class="CartoonBoardFootnote_tag"></div>
+               </div>
+           </div>
+           <div class="CartoonBoard">
+                 <div class="CartoonBoardImgSection">이미지섹션
+                   <div class="CartoonBoardImgSection_Number">4</div>
+                   <div class="CartoonBoardImgSection_img"></div>
+                   <div class="CartoonBoardImgSection_tag"></div>   
+                 </div>        
+                 <div class="CartoonBoardFootnote">설명섹션
+                    <div class="CartoonBoardFootnote_CartoonName"></div>
+                    <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                    <div class="CartoonBoardFootnote_tag"></div>
+                 </div>
+           </div>
+           <div class="CartoonBoard">
+             <div class="CartoonBoardImgSection">이미지섹션
+               <div class="CartoonBoardImgSection_Number">5</div>
+               <div class="CartoonBoardImgSection_img"></div>
+               <div class="CartoonBoardImgSection_tag"></div>   
+             </div>        
+             <div class="CartoonBoardFootnote">설명섹션
+                <div class="CartoonBoardFootnote_CartoonName"></div>
+                <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                <div class="CartoonBoardFootnote_tag"></div>
+             </div>
+           </div>
+       </div>
+     
+     </div>
+
+     <div class="home_page_main_box">
+      <div cLass="home_page_main_box_Subtitle">기다리면 빵원</div>
+      <div class="BarCartoonBoard">
+          <div class="TitleBoard">업데이트 만화</div>
+ 
+          <div class="CartoonBoard">
+           <div class="CartoonBoardImgSection">이미지섹션
+             <div class="CartoonBoardImgSection_Number">1</div>
+             <div class="CartoonBoardImgSection_img"></div>
+             <div class="CartoonBoardImgSection_tag"></div>   
+           </div>        
+           <div class="CartoonBoardFootnote">설명섹션
+              <div class="CartoonBoardFootnote_CartoonName"></div>
+              <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+              <div class="CartoonBoardFootnote_tag"></div>
+           </div>
+           </div>
+           <div class="CartoonBoard">
+             <div class="CartoonBoardImgSection">이미지섹션
+               <div class="CartoonBoardImgSection_Number">2</div>
+               <div class="CartoonBoardImgSection_img"></div>
+               <div class="CartoonBoardImgSection_tag"></div>   
+             </div>        
+             <div class="CartoonBoardFootnote">설명섹션
+                <div class="CartoonBoardFootnote_CartoonName"></div>
+                <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                <div class="CartoonBoardFootnote_tag"></div>
+             </div>
+           </div>
+           <div class="CartoonBoard">
+               <div class="CartoonBoardImgSection">이미지섹션
+                 <div class="CartoonBoardImgSection_Number">3</div>
+                 <div class="CartoonBoardImgSection_img"></div>
+                 <div class="CartoonBoardImgSection_tag"></div>   
+               </div>        
+               <div class="CartoonBoardFootnote">설명섹션
+                  <div class="CartoonBoardFootnote_CartoonName"></div>
+                  <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                  <div class="CartoonBoardFootnote_tag"></div>
+               </div>
+           </div>
+           <div class="CartoonBoard">
+                 <div class="CartoonBoardImgSection">이미지섹션
+                   <div class="CartoonBoardImgSection_Number">4</div>
+                   <div class="CartoonBoardImgSection_img"></div>
+                   <div class="CartoonBoardImgSection_tag"></div>   
+                 </div>        
+                 <div class="CartoonBoardFootnote">설명섹션
+                    <div class="CartoonBoardFootnote_CartoonName"></div>
+                    <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                    <div class="CartoonBoardFootnote_tag"></div>
+                 </div>
+           </div>
+           <div class="CartoonBoard">
+             <div class="CartoonBoardImgSection">이미지섹션
+               <div class="CartoonBoardImgSection_Number">5</div>
+               <div class="CartoonBoardImgSection_img"></div>
+               <div class="CartoonBoardImgSection_tag"></div>   
+             </div>        
+             <div class="CartoonBoardFootnote">설명섹션
+                <div class="CartoonBoardFootnote_CartoonName"></div>
+                <div class="CartoonBoardFootnote_CatrtoonExplanation"></div>
+                <div class="CartoonBoardFootnote_tag"></div>
+             </div>
+           </div>
+       </div>
+     
+     </div>
    
 
 
