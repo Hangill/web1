@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+    <link rel="stylesheet" href="C:\websource\TopMainMenuCSS.css">
+    
+    <style>
+      .CartoonTitlebanner{
+        border:solid black 2px;
+        width:2000px;
+        height:700px;
+        text-align:center;
+      }
+
+      .CartoonTitlebanner img{
+        width:660px;
+        height:340px;
+      }
+    </style>
+
+  </head>
+
+  <body>    
+    <div class="Top_Mainmenu">
+        <a class=Mainmenu_logo_IMG href="file:///C:/example.html" ><img src="C:\websource\logo.png" width="150" height="150"></a>
+        <nav id="Top_Mainmenu_nav">
+          <ul>
+            <li><a class="Mainmenu_menu" href="">메뉴1</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴2</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴3</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴4</a></li>
+            <li><a class="Mainmenu_menu" href="">메뉴5</a></li>
+          </ul>
+        </nav>
+        <div id="Top_Mainmenu_Personal_menu">
+          <a><img src="C:\websource\book.png" height="64">내서재</a>
+          <a><img src="C:\websource\present.png" height="64">선물</a>
+          <div id=Personal_Menu_Icon_box>
+              <a id="Personal_Menu_Icon" onclick="show_menu();"> <img src="C:\websource\Mymenu.png"></a>
+              <nav id="Personal_Menu_bar" value="on" >
+              <ul id="Personal_Menu_bar_ul">
+                <li><a href="">마이페이지</a></li>
+                <li><a href="">내서재</a></li>
+                <li><a href="">북충전</a></li>
+                <li><a href="">고객센터</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div class="CartoonTitlebanner">
+      <img src="C:\websource\CartoonTitilebanner.jpg">
+      <div></div>
+    </div>
+
+
+
+
+
+
+
+  
+    <script>
+        function show_menu(){
+
+          var id_value = document.getElementById("Personal_Menu_bar");
+
+          if(id_value.value === "on"){
+            id_value.style.display = "none";
+            id_value.value="off";
+          }
+
+          else{
+            id_value.style.display = "inline-block";
+            id_value.value="on";
+          }
+        }
+    </script>
+
+  </body>
+</html>

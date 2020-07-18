@@ -1,0 +1,164 @@
+/* <!DOCTYPE css> */
+
+    
+.home_page_main_box{
+  text-align: center;
+  align-items: center;
+  justify-content:center;
+}
+
+.home_page_main_box_Subtitle{
+  color: #000;
+  font-size:25px;
+  height:70px;
+  line-height:70px;
+
+}
+.BarCartoonBoard{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+a { 
+  text-decoration:none;/* a태그 밑줄 전체 제거*/
+  cursor:pointer;
+  color:black;
+} 
+
+.Top_Mainmenu{
+  height: 150px;
+  width:2000px;
+  position: fixed;
+  z-index: 5;
+  top:0px;
+  background-color: white;
+}
+
+#Top_Mainmenu_nav ul li{
+list-style: none;
+float:left;
+line-height: 120px;
+font-size:30px;
+width:5%;
+text-align: center;
+vertical-align: middle;
+}
+
+
+.Mainmenu_Mymenu{
+ color: black;          
+}
+
+.MainMenu_menu_list{
+display : inline;
+background-color: black;
+
+}
+.Mainmenu_menu{
+  color:black;       
+}
+#Personal_Menu_bar ul li{
+ 
+ list-style: none;
+ width:300px;
+ height:50px;
+ border-bottom:solid 1px #666;
+ vertical-align: middle;
+ 
+}
+#Personal_Menu_bar ul{
+ padding-left:0px;
+ margin:0;
+}
+#Personal_Menu_Icon{
+  z-index:2;
+  width:60px;
+  height:60px;
+  position:relative;
+  display:inline-block;
+}
+
+#Personal_Menu_bar{
+z-index:2;
+display:none;
+position:absolute;
+right:0%;
+top:100%;
+vertical-align: middle;
+border:black solid 1px;
+background-color:white;
+}
+
+#Personal_Menu_bar a{
+ width:300px;
+ height: 50px;
+}
+.Personal_Menu{
+ position:relative;
+ display:inline-block;
+ padding-top:30px;
+ vertical-align: middle;
+ height:64px;
+}
+.Personal_Menu a{
+  display: inline-block;
+  height: 64px;
+  
+ }
+
+#Top_Mainmenu_Personal_menu{
+  display:inline-block;
+  margin-top:30px;
+}
+
+
+.Mainmenu_menu:hover{ /* 커서 속성 지정*/
+ cursor:pointer;
+
+}
+.Mainmenu_logo_IMG{
+float:left;
+margin-right:2%;
+margin-left:15%;
+text-decoration:none;    
+
+}
+
+
+body{
+ padding-top:150px;
+ margin:0;
+ overflow-x: scroll;
+
+}
+
+ul{
+margin-top: 0px;
+padding-left: 0px;
+}
+
+#sub_menu{ 
+    border-bottom:  1px solid #c3c9cf ;
+    padding-bottom : 10px;
+}
+.sub_menu_menu{ 
+    margin-right: 10px;
+    display: inline-block; 
+    font-size:large;           
+}
+
+.BarCartoonBoard{
+
+    display:flex;
+    border-bottom: 1px solid #c3c9cf;
+    border-top: 1px solid c3c9cf;
+
+}
+
+#Personal_Menu_Icon_box{
+  display:inline-block;
+  position:relative;
+  height:60px;
+}
+
