@@ -30,9 +30,10 @@ a {
   height: 150px;
   width:2000px;
   position: fixed;
-  z-index: 5;
+  z-index: 5; 
   top:0px;
   background-color: white;
+  border-bottom: solid 2px rgba(200,202,200,0.8);
 }
 
 #Top_Mainmenu_nav ul li{
@@ -120,7 +121,7 @@ background-color:white;
 .Mainmenu_logo_IMG{
 float:left;
 margin-right:2%;
-margin-left:15%;
+margin-left:20%;
 text-decoration:none;    
 
 }
@@ -130,7 +131,7 @@ body{
  padding-top:150px;
  margin:0;
  overflow-x: scroll;
-
+ background-color: rgba(230,232,240,0.8);
 }
 
 ul{
