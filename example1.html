@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8">
 
@@ -10,17 +11,118 @@
     <link rel="stylesheet" href="C:\websource\TopMainMenuCSS.css">
     
     <style>
-      .CartoonTitlebanner{
+      .CartoonTitleBanner{
         border:solid black 2px;
-        width:2000px;
-        height:700px;
+        width:1000px;
+        height:340px;
+        position: relative;
         text-align:center;
+        margin:30px auto;
+      
       }
 
-      .CartoonTitlebanner img{
-        width:660px;
+      .CartoonTitleBanner img{
+        width:600px;
         height:340px;
+        position:relative;
+        
       }
+
+      .CartoonTitleBannerImg{
+        width:600px;
+        height:340px; 
+        display:inline-block;
+        position:relative;
+        margin-right:400px;
+
+      }
+
+      #CartoonTitleBannerDes{
+        display:inline-block;
+        position: absolute;
+        width:360px;
+        height:340px;
+        top:0px;
+        right:0px;
+        text-align: left;
+        background-color:white;
+        padding-left:20px;
+        padding-right:20px;
+        vertical-align:middle;
+
+      }
+
+      #Useage{
+        background-color: gray;
+        color:white;
+        border-radius: 3px;
+        text-align: center;
+        font-size:15px;
+        padding:1px 5px 2px;
+
+        
+      }
+
+      #CartoonTitleBanner_CartoonTitle{
+        line-height:40px;
+        height:40px;
+        font-size:25px;
+        font-weight:600; 
+        margin-top:30px;
+        letter-spacing:-3px;
+      }
+
+      .CartoonEpisodeList{
+        display: inline-block;
+        width:750px;
+        height:150PX;
+        border:solid 1px black;
+        padding:10px 20px;
+      }
+      .CartoonEpisodeImg{
+        display: inline-block;
+        width:210px;
+        height:150PX;
+        border:solid 1px black;
+        margin-right:15px;
+      }
+      .CartoonEpisodeDes{
+        display: inline-block;
+        width:525px;
+        height:150PX;
+        border:solid 1px black;
+      }
+      .manhwa_section_left{
+        width:792px; 
+        float:left;
+      }
+
+      .manhwa_section_right{
+        width:197px; 
+        float:right;
+      }
+      #manhwa_section_left_ad{
+        display:inline-block;
+        height:100px;
+        border:black solid 1px;
+        margin-bottom:20px;
+      }
+
+      #manhwa_section_right_ad{
+        display:inline-block;
+        border:black 1px solid;
+        height:100px;
+        margin-bottom:20px;
+      }
+      #manhwa_section_left_manhwa{
+        
+      }
+
+      .CartoonEpisodeList{
+        background-color: rgba(230,232,240,0.8);
+        }
+
+
     </style>
 
   </head>
@@ -55,18 +157,53 @@
     </div>
     
     
-    <div class="CartoonTitlebanner">
-      <img src="C:\websource\CartoonTitilebanner.jpg">
-      <div></div>
+    <div class="CartoonTitleBanner">
+      <div class="CartoonTitleBannerImg">
+        <img src="C:\websource\CartoonTitilebanner.jpg">
+      </div>
+      <div id="CartoonTitleBannerDes">
+        <div id="CartoonTitleBanner_CartoonTitle">
+          <span id="">만화제목</span>
+        </div>
+          <p>만화 설명</p>
+          <span id="Useage"> 12세 이용가</span>
+        
+      </div>
+    </div>
+
+    <div style="margin:auto; width:1000px;">
+      <div class="manhwa_section_left" id="manhwa_section_left_ad">광고및공지</div>
+      <div class="manhwa_section_right" id="manhwa_section_right_ad">작가님 후원</div>
+      <div class="manhwa_section_left" id="manhwa_section_left_manhwa" >
+        <table>  
+          <tbody>
+           <tr>
+             <td>
+               <div class="CartoonEpisodeList">
+                  <ul>
+                    <li style="display:flex">
+                       <div class="CartoonEpisodeImg">이미지</div>
+                       <div class="CartoonEpisodeDes">설명부분
+                         <div class="CartoonEpisodeDes_CapterNumber&Subtitle">
+                           <div class="CartoonEpisodeDes_CapterNumber">
+                             <p class="CartoonEpisodeDes_CapterNumber_value"></p>
+                           </div>
+                           <p class="CartoonEpisodeDes_CapterSubtitle" ></p>
+                         </div>
+                       </div>
+
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="manhwa_section_right" id="manhwa_section_right_ranking"></div>
     </div>
 
 
-
-
-
-
-
-  
     <script>
         function show_menu(){
 
@@ -85,4 +222,6 @@
     </script>
 
   </body>
+
+
 </html>
