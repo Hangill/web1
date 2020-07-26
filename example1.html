@@ -72,26 +72,7 @@
         letter-spacing:-3px;
       }
 
-      .CartoonEpisodeList{
-        display: inline-block;
-        width:750px;
-        height:150PX;
-        border:solid 1px black;
-        padding:10px 20px;
-      }
-      .CartoonEpisodeImg{
-        display: inline-block;
-        width:210px;
-        height:150PX;
-        border:solid 1px black;
-        margin-right:15px;
-      }
-      .CartoonEpisodeDes{
-        display: inline-block;
-        width:525px;
-        height:150PX;
-        border:solid 1px black;
-      }
+
       .manhwa_section_left{
         width:792px; 
         float:left;
@@ -114,36 +95,65 @@
         height:100px;
         margin-bottom:20px;
       }
-      #manhwa_section_left_manhwa{
-        
-      }
 
-      .CartoonEpisodeList{
-        background-color: rgba(230,232,240,0.8);
-      }
-
+   
       #manhwa_section_right_ranking{
         border: solid 1px black;
         height: 600px;
       }
-      .manhwa_section_right_ranking_list{
-        display:inline-block;
-        border-bottom: 1px solid black;
-        width:100%;
-        height:9.5%
-      
+      .manhwa_section_right_ranking_list_img{
+        float:left;
+        width:30px;
+        height:30px;
+        position:relative;
+        bottom:0px;
+        padding-left:5px;
+        margin-bottom:3px;
+      }
+      .manhwa_section_right_ranking_list_des{
+        font-size:10px;
+        padding-left:5px;
+        position: relative;
+        float:left;
+      }
+      .manhwa_section_right_ranking_list_des a{
+        font-size: 12px;;
       }
 
       #manhwa_section_right_ranking li{
-        display:list-item;
-        list-style-position: inside;
-        font-size: 20px;
+        font-size: 12px;
+      }
 
+      .manhwa_section_right_ranking_list{
+        float:left;
+        padding-left:5px;
+    
       }
-      #manhwa_section_right_ranking ol{
-        padding:0px 5px;
-      
+      #Cartoon{
+        border: 1px solid black;
+        width:794px;
       }
+      #Cartoon tr{
+        padding: 20px 0;
+        height:100px;
+        width:794px;
+      }
+      .CartoonCapterTitleImg{
+        width:18%;
+        padding:2%
+      }
+      .CartoonTitle{
+        width:55%;
+        padding-left:2%;
+        padding-right:3%;
+      }
+      .Cartoon_evaluation{
+        width:5%;
+      }
+      .Cartoon_UploadDate{
+        width:15%;
+      }
+    
     </style>
 
   </head>
@@ -196,42 +206,38 @@
       <div class="manhwa_section_left" id="manhwa_section_left_ad">광고및공지</div>
       <div class="manhwa_section_right" id="manhwa_section_right_ad">작가님 후원</div>
       <div class="manhwa_section_left" id="manhwa_section_left_manhwa" >
-        <table>  
-          <tbody>
+        <table id="Cartoon">  
+          <tbody >
            <tr>
-             <td>
-               <div class="CartoonEpisodeList">
-                  <ul>
-                    <li style="display:flex">
-                       <div class="CartoonEpisodeImg">이미지</div>
-                       <div class="CartoonEpisodeDes">설명부분
-                         <div class="CartoonEpisodeDes_CapterNumber&Subtitle">
-                           <div class="CartoonEpisodeDes_CapterNumber">
-                             <p class="CartoonEpisodeDes_CapterNumber_value"></p>
-                           </div>
-                           <p class="CartoonEpisodeDes_CapterSubtitle" ></p>
-                         </div>
-                       </div>
-
-                    </li>
-                  </ul>
-                </div>
-              </td>
+             <td class="CartoonCapterTitleImg">
+              <a href=""><img src="C:\websource\CartoonTitilebanner.jpg" width="125px" ></a>
+             </td>
+             <td class="CartoonTitle">
+               <a href="">1화: 만화 제목이요우!</a>
+             </td>
+             <td class-="Cartoon_evaluation">
+               <div>별점 부분</div>
+             </td>
+             <td class="Cartoon_UploadDate">
+               <P> 만화 등록일</P>
+             </td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="manhwa_section_right" id="manhwa_section_right_ranking">
-        <ol>
-          <li >
-            <div class="manhwa_section_right_ranking_list"><img src="C:\websource\testwebranking1.jpg" style="width:20px; height:20px;"></div>
-          </li>
-
+        <ol style="padding-left:20px" >
           <li>
-            <div class="manhwa_section_right_ranking_list"></div>
+            <div class="manhwa_section_right_ranking_list">
+              <a class="manhwa_section_right_ranking_list_img"><img src="C:\websource\testwebranking1.jpg" style="width:30px; height:30px;"></a>
+            </div>
+            <div class="manhwa_section_right_ranking_list_des">
+                <a>만화제목</a>
+                <br>
+                <a>그림작가/글작가</a>
+            </div>
           </li>
         </ol>
-
       </div>
     </div>
 
